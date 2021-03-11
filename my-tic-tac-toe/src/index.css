@@ -17,7 +17,7 @@ body {
     margin-bottom: 10px;
   }
   
-  .square {
+  #square {
     background: #fff;
     border: 1px solid #999;
     float: left;
@@ -31,7 +31,9 @@ body {
     text-align: center;
     width: 60px;
   }
-  
+  #square.green {
+    background-color: rgb(59, 193, 90);
+  }
   .square:focus {
     outline: none;
   }
@@ -42,11 +44,73 @@ body {
   
   .game {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
     margin: 0 50px;
+
   }
   
   .game-info {
-    margin-left: 20px;
+    box-sizing: border-box;
+    width: 178px;
+    padding: 20px 10px;
+    text-align: center;
+    background: rgba(252, 98, 70, 0.5);
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
   }
   
+  .game-board {
+    position: relative;
+  }
+  @keyframes fade {
+    from {
+      opacity: 1;
+    }
+  
+    to {
+      opacity: 0;
+    }
+  }
+   
+  .win {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(27, 137, 162, 0.8);
+    color: cornsilk;
+    font-size: 18px;
+    font-weight: 700;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    animation: 3s fade;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  .repeat {
+    width: 178px;
+    padding: 20px 40px;
+    background:  rgba(252, 98, 70, 0.8);
+    color: white;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: none;
+  }
+
+  .wrapper {
+    width: 178px;
+    text-align: center;
+    background: #e4e4e4;
+  }
+  .zero {
+    color: darkblue;
+  }
+  .iks {
+    color:saddlebrown
+  }
