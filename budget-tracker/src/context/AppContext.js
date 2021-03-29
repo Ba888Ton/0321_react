@@ -8,16 +8,14 @@ const AppReducer = (state, action) => {
             const newExpenses = state.expenses.filter( item => item.id !== action.payload)
             return { ...state, expenses:[ ...newExpenses] }
         case 'add':
-            const addExpense = { id:action.payload.id, name:action.payload.name, cost:action.payload.cost }
-            console.log(addExpense)
-            return { ...state, expenses:[ ...state.expenses, addExpense] }
+            return { ...state, expenses:[ ...state.expenses, action.payload] }
         default:
             return state;
     }
 }
 
 const initialState = {
-    budget: 12000,
+    budget: 1000,
     expenses: [
         { id:22, name: 'shopping', cost: 42 },
         { id:23, name: 'holiday', cost: 403 },

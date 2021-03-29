@@ -15,12 +15,6 @@ const ExpenseList = () => {
 					<ExpenseItem  id={expense.id} key={expense.id} name={expense.name} cost={expense.cost} delItem={delItem} />
 				))}
 			</ul>
-			<div>
-				<button 
-					className="btn btn-secondary"
-					onClick={() => dispatch({type:"add", payload:{id: nanoid(), name: "zatraty", cost: 76} })}
-				>add</button>
-			</div>
 		</>
 
     )
